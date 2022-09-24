@@ -1,0 +1,21 @@
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 2362 entries, 1 to 2602
+Data columns (total 14 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   world_rank              2362 non-null   object 
+ 1   university_name         2362 non-null   object 
+ 2   country                 2362 non-null   object 
+ 3   teaching                2362 non-null   float64
+ 4   international           2362 non-null   object 
+ 5   research                2362 non-null   float64
+ 6   citations               2362 non-null   float64
+ 7   income                  2362 non-null   object 
+ 8   total_score             2362 non-null   object 
+ 9   num_students            2362 non-null   object 
+ 10  student_staff_ratio     2362 non-null   float64
+ 11  international_students  2362 non-null   object 
+ 12  female_male_ratio       2362 non-null   object 
+ 13  year                    2362 non-null   int64  
+dtypes: float64(4), int64(1), object(9)
+memory usage: 276.8+ KB

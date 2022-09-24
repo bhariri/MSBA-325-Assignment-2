@@ -1,0 +1,7 @@
+bar_chart_race==0.1.0
+ffmpeg==1.4
+matplotlib==3.5.1
+pandas==1.4.2
+Pillow==9.2.0
+plotly==5.7.0
+streamlit==1.4.0
