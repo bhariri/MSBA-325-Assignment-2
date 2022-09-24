@@ -257,14 +257,14 @@ if navigate == 'Plotly Visualizations':
     
     
    
-    # dfa2=df
-    # dfa2.drop(df.columns[[0,3,4,5,6,7,8,9,10,11,12,13,14]], axis=1, inplace=True)
-    # dfa2.head()
-    # dfa2.info()
+    dfa2=df
+    dfa2.drop(df.columns[[0,3,4,5,6,7,8,9,10,11,12,13,14]], axis=1, inplace=True)
+    fa2.head()
+    dfa2.info()
     
     # #dfa2 = dfa2.pivot(index = "year", columns = "university_name", values = "num_of_students").reset_index().rename_axis(None, axis=1)
     
     
-    # dfa2.set_index("year", inplace = True)
-    # fig6=bcr.bar_chart_race(dfa2, filename=('race.mp4'),n_bars=3,filter_column_colors=True,title='test test')
-    # st.plotly_chart(fig6)
+    dfa2.set_index("year", inplace = True)
+    fig6=bcr.bar_chart_race(dfa2, filename=('race.mp4'),n_bars=3,filter_column_colors=True,title='test test')
+    st.plotly_chart(fig6)
