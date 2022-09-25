@@ -218,30 +218,40 @@ if navigate == 'Plotly Visualizations':
     st.plotly_chart((fig4))
     
     #Bubble Chart of University world rank (Top 20) vs teaching score with number of students(size) and international score (color) in 2016
-    st.markdown("<h6 style='text-align: center; color: black;'>Bubble chart of University world rank (Top 20) vs teaching score with number of students(size) and international score (color) in 2016</h1>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: center; color: black;'>Bubble chart of University world rank vs teaching score with number of citations(size)</h1>", unsafe_allow_html=True)
+    
+    #TEST 1
     # will take the top 20 universities from the dataset
-    df2016_4 = df[df.year == 2016].iloc[:20,:]
+    # df2016_4 = df[df.year == 2016].iloc[:20,:]
     
-    num_students_size  = [float(each.replace(',', '.')) for each in df2016_4.num_students]
-    international_color = [float(each) for each in df2016_4.international]
+    # num_students_size  = [float(each.replace(',', '.')) for each in df2016_4.num_students]
+    # international_color = [float(each) for each in df2016_4.international]
     
-    fig5 = [
-        {
+    # fig5 = [
+    #     {
             
-            'y': df2016_4.teaching,
-            'x': df2016_4.world_rank,
-            'mode': 'markers',
-            'marker': {
-                'color': international_color,
-                'size': num_students_size,
-                'showscale': True,},
-            "text" :  df2016_4.university_name,
+    #         'y': df2016_4.teaching,
+    #         'x': df2016_4.world_rank,
+    #         'mode': 'markers',
+    #         'marker': {
+    #             'color': international_color,
+    #             'size': num_students_size,
+    #             'showscale': True,
+    #               },
+    #         "text" :  df2016_4.university_name,
             
-        }
+    #     }
         
-    ]
+    # ]
     
-    st.plotly_chart(fig5)
+    
+    #TEST 2
+#     import plotly.express as px
+#     fig5 = px.scatter(df.query("year==2016").iloc[:20,:], x="world_rank", y="teaching",
+# 	         size="num_of_students", color="international",
+#                   hover_name="university_name", log_x=True,size_max=50)
+    
+    # st.plotly_chart(fig5)
     
     #Animated 
     import plotly.express as px
@@ -252,19 +262,19 @@ if navigate == 'Plotly Visualizations':
                log_x=True, size_max=55, range_x=[1,100], range_y=[25,90])
     st.plotly_chart(fig6)
     
-    # #Animated 2
     
     
+    # #Failed Race Bar
     
-   
-    #dfa2=df
-   # dfa2.drop(df.columns[[0,3,4,5,6,7,8,9,10,11,12,13,14]], axis=1, inplace=True)
-   # fa2.head()
-   #dfa2.info()
+          
+    # dfa2=df
+    # dfa2.drop(df.columns[[0,3,4,5,6,7,8,9,10,11,12,13,14]], axis=1, inplace=True)
+    # dfa2.head()
+    # dfa2.info()
     
     # #dfa2 = dfa2.pivot(index = "year", columns = "university_name", values = "num_of_students").reset_index().rename_axis(None, axis=1)
     
     
-    #dfa2.set_index("year", inplace = True)
-    #fig6=bcr.bar_chart_race(dfa2, filename=('race.mp4'),n_bars=3,filter_column_colors=True,title='test test')
-    #st.plotly_chart(fig6)
+    # dfa2.set_index("year", inplace = True)
+    # fig6=bcr.bar_chart_race(dfa2, filename=('race.mp4'),n_bars=3,filter_column_colors=True,title='test test')
+    # st.plotly_chart(fig6)
